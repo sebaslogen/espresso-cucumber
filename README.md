@@ -134,6 +134,15 @@ Example: `adb shell am instrument -r -w com.tomtom.pnd.firstrunwizard.test/com.t
 More information: http://www.kandroid.org/online-pdk/guide/instrumentation_testing.html
 
 
+## Technical details of mixing Espresso and Cucumber
+
+The integration happens in the **[EspressoInstrumentation](https://github.com/neoranga55/espresso-cucumber/blob/master/espresso-test-lib/EspressoInstrumentation/src/com/tomtom/espresso/test/EspressoInstrumentation.java) class**, this is where the **AndroidJUnitRunner** Instrumentation needs to be extended to add Cucumber features. By creating a **CucumberInstrumentationCore** object and providing the bundle to this object, Cucumber can start the tests and take control of the testing flow when the test instrumentation is started.
+
+Finally, the configuration file that selects which test definition classes will be used and which feature files will be executed is defined in a class with the tag `@RunWith(Cucumber.class)`. There is a nice and simple example in the  **[RunCucumberTest](https://github.com/neoranga55/espresso-cucumber/blob/master/sample-test-project/FirstRunWizardEspressoTest/src/java/com/tomtom/pnd/firstrunwizard/test/RunCucumberTest.java)** class.
+
+_Warning: The combination of Espresso and Cucumber could produce a horrible taste on human beings, please consider  applying it only to Androids._
+
+
 ## Licenses
 
 This library was produced internally at TomTom but is released under Apache license 2.0
