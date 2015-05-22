@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-android-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-core-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-html-0.2.3-improved.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-java-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-junit-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-jvm-deps-1.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber-picocontainer-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/dagger-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/espresso-contrib-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/espresso-core-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/espresso-idling-resource-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/gherkin-2.12.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/guava-18.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hamcrest-core-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hamcrest-integration-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hamcrest-library-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/javawriter-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/javax.annotation-api-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/javax.inject-1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jsr305-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/junit-dep-4.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/picocontainer-2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/testing-support-lib-0.1.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
