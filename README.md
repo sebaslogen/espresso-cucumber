@@ -1,19 +1,20 @@
 # Espresso + Cucumber + Spoon
 
-Library to test Android applications using Espresso test framework with cucumber BDD language and Spoon screenshots
+Library to test Android applications using Espresso **test framework with cucumber BDD language and Spoon screenshots**.
 
-The objective of this library is to enable UI testing with access to application internals through JUnit but expressed in a natural English language and supported by screenshots when needed
+The objective of this library is to enable UI testing with access to application internals through JUnit while expressed in a natural English language and supported by screenshots when required.
 
-This library is created for use with Eclipse and/or with Ant, to use in Android Studio or with gradle I recommend using gradle versions management to fetch libraries from the maven repositories
+This library is created for use with Eclipse and/or with Ant, to use in Android Studio or with gradle I recommend using gradle version management to fetch libraries from the maven repositories.
 
+**Sample test execution report**
 ![test execution report image](https://raw.githubusercontent.com/neoranga55/espresso-cucumber/master/report-sample.png)
-Sample test execution report
+
 
 ## Espresso
 
 Android test Instrumentation library created by Google to write concise, beautiful, and reliable Android UI tests
 
-Key features:
+**Key features**:
 + Damn fast
 + Less flaky tests (thanks to automatic synchronization with UI thread)
 + Better code (clearner, shoter and more readable code) thanks to the use of hamcrest expressions
@@ -34,7 +35,7 @@ https://code.google.com/p/android-test-kit/wiki/EspressoV2CheatSheet
 
 ## Cucumber
 
-[BDD](http://en.wikipedia.org/wiki/Behavior-driven_development) or behavior-driven development allows developers and testers to write test code that is highly readable and can *turn the tests in the most up to date documentation of the application*.
+[BDD](http://en.wikipedia.org/wiki/Behavior-driven_development) or behavior-driven development allows developers and testers to write test code that is highly readable and can **turn the tests in the most up to date documentation of the application**.
 
 Cucumber is a thin library that enables abstraction of Java code into BDD language.
 
@@ -74,7 +75,7 @@ http://35qk152ejao6mi5pan29erbr9.wpengine.netdna-cdn.com/wp-content/uploads/2011
 
 [Spoon is a library](https://github.com/square/spoon) from Square to distribute tests across multiple devices but also to take screenshots of the running application.
 
-The use integrated in this library is to *take screenshots automatically when a test fails* and to enable screenshots on demand. In addition, test cases can include screenshots on demand for debugging or inspection purposes.
+The use integrated in this library is to **take screenshots automatically when a test fails** and to enable screenshots on demand. In addition, test cases can include screenshots on demand for debugging or inspection purposes.
 
 
 ## Getting started
