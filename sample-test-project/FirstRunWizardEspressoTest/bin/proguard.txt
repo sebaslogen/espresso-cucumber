@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:12
+-keep class com.tomtom.espresso.test.EspressoInstrumentation { <init>(...); }
+
