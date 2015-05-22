@@ -29,7 +29,9 @@ onView(withText("Expected text").check(matches(isDisplayed()));
 ```
 
 #### Links
+
 https://code.google.com/p/android-test-kit/wiki/Espresso
+
 https://code.google.com/p/android-test-kit/wiki/EspressoV2CheatSheet
 
 
@@ -64,10 +66,15 @@ public void i_see_text(final String text) {
 ```
 
 #### Links
+
 https://cukes.info/ (Cucumber)
+
 https://github.com/cucumber/cucumber-jvm/
+
 https://github.com/masterthought/cucumber-reporting (Improved cucumber reporting)
+
 http://blog.czeczotka.com/2014/08/17/writing-cucumber-jvm-step-definitions/ (Advanced step definitions with regular expressions in Java-Cucumber)
+
 http://35qk152ejao6mi5pan29erbr9.wpengine.netdna-cdn.com/wp-content/uploads/2011/08/Cucumber-Regular-Expressions-Cheat-Sheet.pdf
 
 
@@ -119,8 +126,10 @@ cd espresso-test-lib
 ## Running a test
 
 The execution follows the same procedure as any [Android instrumentation test](http://developer.android.com/tools/testing/testing_android.html) with this basic two steps:
+
 1. Compile and install test project (this should automatically compile the application the you're going to test)
-2. Execute Android instrumentation from command line using ADB. Example: `adb shell am instrument -r -w com.tomtom.pnd.firstrunwizard.test/com.tomtom.espresso.test.EspressoInstrumentation`
+2. Execute Android instrumentation from command line using ADB.
+Example: `adb shell am instrument -r -w com.tomtom.pnd.firstrunwizard.test/com.tomtom.espresso.test.EspressoInstrumentation`
 
 More information: http://www.kandroid.org/online-pdk/guide/instrumentation_testing.html
 
