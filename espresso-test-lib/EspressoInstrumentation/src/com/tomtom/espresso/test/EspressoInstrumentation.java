@@ -28,6 +28,7 @@ public class EspressoInstrumentation extends android.support.test.runner.Android
     public void onCreate(final Bundle bundle) {
         cucumberInstrumentationCore.create(bundle);
         super.onCreate(bundle);
+        disableAnimation();
     }
 
     @Override
