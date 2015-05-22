@@ -6,6 +6,8 @@ The objective of this library is to enable UI testing with access to application
 
 This library is created for use with Eclipse and/or with Ant, to use in Android Studio or with gradle I recommend using gradle versions management to fetch libraries from the maven repositories
 
+![test execution report image](https://raw.githubusercontent.com/neoranga55/espresso-cucumber/master/report-sample.png)
+Sample test execution report
 
 ## Espresso
 
