@@ -11,8 +11,6 @@ This library is created for use with Eclipse and/or with Ant, to use in Android 
 
 Android test Instrumentation library created by Google to write concise, beautiful, and reliable Android UI tests
 
-https://code.google.com/p/android-test-kit/wiki/Espresso
-
 Key features:
 + Damn fast
 + Less flaky tests (thanks to automatic synchronization with UI thread)
@@ -26,6 +24,10 @@ getActivity();
 onView(withText("Show text")).perform(click());
 onView(withText("Expected text").check(matches(isDisplayed()));
 ```
+
+#### Links
+https://code.google.com/p/android-test-kit/wiki/Espresso
+https://code.google.com/p/android-test-kit/wiki/EspressoV2CheatSheet
 
 
 ## Cucumber
@@ -59,13 +61,10 @@ public void i_see_text(final String text) {
 ```
 
 #### Links
-
 https://cukes.info/ (Cucumber)
-
-https://github.com/masterthought/cucumber-reporting (Improve cucumber reporting)
-
+https://github.com/cucumber/cucumber-jvm/
+https://github.com/masterthought/cucumber-reporting (Improved cucumber reporting)
 http://blog.czeczotka.com/2014/08/17/writing-cucumber-jvm-step-definitions/ (Advanced step definitions with regular expressions in Java-Cucumber)
-
 http://35qk152ejao6mi5pan29erbr9.wpengine.netdna-cdn.com/wp-content/uploads/2011/08/Cucumber-Regular-Expressions-Cheat-Sheet.pdf
 
 
@@ -74,3 +73,59 @@ http://35qk152ejao6mi5pan29erbr9.wpengine.netdna-cdn.com/wp-content/uploads/2011
 [Spoon is a library](https://github.com/square/spoon) from Square to distribute tests across multiple devices but also to take screenshots of the running application.
 
 The use integrated in this library is to *take screenshots automatically when a test fails* and to enable screenshots on demand. In addition, test cases can include screenshots on demand for debugging or inspection purposes.
+
+
+## Getting started
+
+The code in this repository can be compiled and imported as a library in an Android test project to be used or modified.
+
+A faster method to bootstrap a test application is to use the script in this repository to automatically create a test project for your application using a template
+
+#### Bootstrapping a test project
+Execute script espresso.py to generate a new test project for your application.
+You need to supply the package name of your application and the initially tested Activity, see below:
+```java
+./espresso.py -h
+usage: espresso.py [-h] [-d DESTINATION_PATH] [-p PROJECT_NAME] [-a ACTIVITY]
+                   action element package
+ 
+Create test project with Cucumber and Espresso from template    
+For Espresso library examples and documentation visit: https://code.google.com/p/android-test-kit/wiki/EspressoSamples
+ 
+positional arguments:
+  action                The action to perform (e.g. 'generate' or just 'g')
+  element               The element to perform the action (e.g. 'test' or just 't')
+  package               The package of the target application to test (e.g. com.tomtom.pnd.firstrunwizard)
+ 
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DESTINATION_PATH, --destination-path DESTINATION_PATH
+                        Path inside which the test project will be created and placed (e.g. .../MyAppProject/test)
+  -p PROJECT_NAME, --project-name PROJECT_NAME
+                        Name of the project to test (last part of package name is used by default)
+  -a ACTIVITY, --default-activity ACTIVITY
+                        Name of the main activity to test (test will instrument this activity as starting point, e.g. HomeActivity)
+```
+
+Example to generate a test from example application 'ShopDemoApp':
+```java
+cd espresso-test-lib
+./espresso.py g t com.tomtom.pnd.shopdemo -p ShopDemoApp -a ShopDemoVideoActivity -d ../../pndapps/Apps/ShopDemoApp/test
+```
+
+## Running a test
+
+The execution follows the same procedure as any [Android instrumentation test](http://developer.android.com/tools/testing/testing_android.html) with this basic two steps:
+1. Compile and install test project (this should automatically compile the application the you're going to test)
+2. Execute Android instrumentation from command line using ADB. Example: `adb shell am instrument -r -w com.tomtom.pnd.firstrunwizard.test/com.tomtom.espresso.test.EspressoInstrumentation`
+
+More information: http://www.kandroid.org/online-pdk/guide/instrumentation_testing.html
+
+
+## Licenses
+
+This library was produced internally at TomTom but is released under Apache license 2.0
+
+- Espresso: Apache 2.0 https://code.google.com/p/android-test-kit/
+- Cucumber: https://github.com/cucumber/cucumber-jvm/blob/master/LICENCE
+- Spoon: Apache 2.0 https://github.com/square/spoon/blob/master/LICENSE.txt
