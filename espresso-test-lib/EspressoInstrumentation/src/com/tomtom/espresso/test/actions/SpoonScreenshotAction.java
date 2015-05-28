@@ -17,11 +17,23 @@ import android.view.View;
 
 import java.io.File;
 
+/**
+ * Class to take screenshots using Spoon library from an Espresso test
+ * Original code from Gist: https://gist.github.com/edenman/7fdd32a4d59ccc01185b
+ */
 public final class SpoonScreenshotAction implements ViewAction {
-    private final String tag;
-    private final String testClass;
-    private final String testMethod;
-    private static File lastScreenshot;
+    private final String mTag;
+    private final String mTestClass;
+    private final String mTestMethod;
+    private static File sLastScreenshot;
+
+    /**
+     * Get the last captured screenshot file
+     * @return Last screenshot file handler or null if there was no screenshot taken
+     */
+    public static File getLastScreenshot() {
+        return sLastScreenshot;
+    }
 
     /**
      * Initialize with information required to take a screenshot
@@ -30,9 +42,9 @@ public final class SpoonScreenshotAction implements ViewAction {
      * @param testMethod Name of the method taking the screenshot
      */
     public SpoonScreenshotAction(final String tag, final String testClass, final String testMethod) {
-        this.tag = tag;
-        this.testClass = testClass;
-        this.testMethod = testMethod;
+        mTag = tag;
+        mTestClass = testClass;
+        mTestMethod = testMethod;
     }
 
     @Override
@@ -47,11 +59,7 @@ public final class SpoonScreenshotAction implements ViewAction {
 
     @Override
     public void perform(final UiController uiController, final View view) {
-        lastScreenshot = Spoon.screenshot(getActivity(view), tag, testClass, testMethod);
-    }
-
-    public static File getLastScreenshot() {
-        return lastScreenshot;
+        sLastScreenshot = Spoon.screenshot(getActivity(view), mTag, mTestClass, mTestMethod);
     }
 
     /**
