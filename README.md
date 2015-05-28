@@ -117,10 +117,10 @@ optional arguments:
                         Name of the main activity to test (test will instrument this activity as starting point, e.g. HomeActivity)
 ```
 
-Example to generate a test from example application 'ShopDemoApp':
+Example to generate a test from example application 'DemoApp':
 ```java
 cd espresso-test-lib
-./espresso.py g t com.tomtom.pnd.shopdemo -p ShopDemoApp -a ShopDemoVideoActivity -d ../../pndapps/Apps/ShopDemoApp/test
+./espresso.py g t com.tomtom.pnd.demo -p DemoApp -a DemoActivity -d ../../pndapps/Apps/DemoApp/test
 ```
 
 ## Running a test
