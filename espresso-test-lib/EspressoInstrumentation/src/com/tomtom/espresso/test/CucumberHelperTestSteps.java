@@ -100,9 +100,9 @@ public class CucumberHelperTestSteps {
         }
     }
 
-    @Given("^I take a screeshot$")
+    @Given("^I take a screenshot$")
     public void i_take_a_screenshot() {
-        takeScreenshot("screeshot");
+        takeScreenshot("screenshot");
     }
 
     /**
